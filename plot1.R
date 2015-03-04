@@ -1,3 +1,16 @@
-dataFile<-"household_power_consumption.txt"
-data<-read.table(dataFile,header = TRUE,sep=";",na.strings="?",stringsAsFactors=FALSE)
+library(lubridate)
+source('get_data.R')
+
+data<-get_data()
+
+
+png(file = "plot1.png", width=480, height=480)
+
+hist(data$Global_active_power, 
+     col="red",
+     main="Global Active Power",
+     xlab="Global Active Power (kilowatts)")
+
+dev.off()
+
 
