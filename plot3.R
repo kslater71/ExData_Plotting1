@@ -17,7 +17,8 @@ lines(data$DateTime,data$Sub_metering_2,col="red")
 lines(data$DateTime,data$Sub_metering_3,col="blue")
 
 legendTxt <- c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
-legend("topright",legend=legendTxt)
+legendCol <- c("black", "red", "blue")
+legend("topright",legend=legendTxt, col=legendCol, lwd=1)
 
 dev.off()
 
