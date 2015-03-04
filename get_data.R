@@ -1,4 +1,5 @@
-library(lubridate)
+
+# The get_data function is called by plot1.R, plot2.R, plot3.R and plot4.R
 
 get_data <- function() {
      dataFile<-"household_power_consumption.txt"
@@ -12,6 +13,7 @@ get_data <- function() {
      data = subset(data, 
           DateTime >= startDateTime & DateTime < endDateTime,
           select=-c(Date,Time))
+     
      return(data)
 }
 

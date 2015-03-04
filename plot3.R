@@ -1,8 +1,9 @@
+# This assumes the file "household_power_consumption.txt" is in the working directory.
+
 library(lubridate)
-source('get_data.R')
+source('get_data.R')   # defines get_data() function
 
-#data<-get_data()
-
+data<-get_data()
 
 png(file = "plot3.png", width=480, height=480)
 
